@@ -30,9 +30,7 @@ function myButtonClicked() {
   }
 
   if ((numA < 0 && numB > 0) || (numB < 0 && numA > 0))
-    document.getElementById("product").innerHTML =
-      "The product is: " + product
+    document.getElementById("product").innerHTML = "The product is: " + product
   else
-    document.getElementById("product").innerHTML =
-      "The product is: " + product
+    document.getElementById("product").innerHTML = "The product is: " + product
 }
