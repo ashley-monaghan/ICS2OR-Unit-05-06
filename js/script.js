@@ -10,31 +10,29 @@
  * Check servie worker.
  */
 if (navigator.serviceWorker) {
-  navigator.serviceWorker.register("/ICS2O-PWA-Test/sw.js", {
-    scope: "/ICS2O-PWA-Test/",
+  navigator.serviceWorker.register("/ICS2OR-Unit-05-06/sw.js", {
+    scope: "/ICS2OR-Unit-05-06/",
   })
 }
 
 /**
- * This function displays an alert.
- * Math
+ * This function does multiplication.
  */
-function calculate() {
-  // input
-  const a = parseInt(document.getElementById("textbox-a").value)
-  const b = parseInt(document.getElementById("textbox-b").value)
-  const c = parseInt(document.getElementById("textbox-c").value)
+function myButtonClicked() {
+  var numA = parseFloat(document.getElementById("firstInputedNumber").value)
+  var numB = parseFloat(document.getElementById("secondInputedNumber").value)
+  var product = 0
+  var counter = 0
 
-  // process
-  const math = a + b + c
-  // output
-  document.getElementById("math").innerHTML = "Numbers: " + math + " units"
-}
+  while (counter < Math.abs(numB)) {
+    counter++
+    product = product + Math.abs(numA)
+  }
 
-/**
- * This function displays an alert.
- * Words
- */
-function button() {
-  document.getElementById("words").innerHTML = "<p>Hello, World!</p>"
+  if ((numA < 0 && numB > 0) || (numB < 0 && numA > 0))
+    document.getElementById("product").innerHTML =
+      "The product is: " + product
+  else
+    document.getElementById("product").innerHTML =
+      "The product is: " + product
 }

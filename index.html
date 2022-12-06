@@ -11,9 +11,9 @@
     <title>GitHub page as PWA template</title>
     <link
       rel="canonical"
-      href="https://ashley-monaghan.github.io/ICS2O-PWA-Test/"
+      href="https://ashley-monaghan.github.io/ICS2OR-Unit-05-06/"
     />
-    <link rel="manifest" href="/ICS2O-PWA-Test/manifest.webmanifest" />
+    <link rel="manifest" href="/ICS2OR-Unit-05-06/manifest.webmanifest" />
     <link rel="stylesheet" href="./css/styles.css" />
     <!--- None blocking for Lighthouse report --->
     <!--- https://stackoverflow.com/questions/32759272/how-to-load-css-asynchronously --->
@@ -78,6 +78,21 @@
           </div>
         </form>
         <p></p>
+        <!-- secondInputedNumber | Numeric Textfield with text beside textbox -->
+        <form action="#">
+          <div class="mdl-textfield mdl-js-textfield">
+            <input
+              class="mdl-textfield__input"
+              type="text"
+              pattern="-?[0-9]*(\.[0-9]+)?"
+              id="secondInputedNumber"
+            />
+            <label class="mdl-textfield__label" for="secondInputedNumber"
+              >...</label
+            >
+            <span class="mdl-textfield__error">Input is not a number!</span>
+          </div>
+        </form>
         <!-- Raised button with ripple for math -->
         <button
           class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
@@ -85,17 +100,16 @@
         >
           Math!!
         </button>
-        <!-- Raised button with ripple for words -->
+        <!-- Raised button with ripple -->
         <button
           class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
-          onclick="button()"
+          onclick="myButtonClicked()"
         >
-          Button!!
+          Calculate
         </button>
         <!-- basic text -->
         <p></p>
-        <div id="math"></div>
-        <div id="words"></div>
+        <div id="product"></div>
       </main>
     </div>
   </body>
